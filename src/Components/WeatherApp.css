@@ -1,0 +1,91 @@
+.weatherappimg{
+    
+}
+
+.weatherappimg img{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: -99;
+    /* filter: brightness(50%)blur(0px); */
+    object-fit: cover;
+}
+.weatherapp{
+    /* padding: 25px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.left-part{
+    padding: 25px;
+    width: 66%;
+    height: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    background: linear-gradient(to bottom, #63636300 0%, #000000bd 88%);
+    
+}
+.onloadtext{
+    font-weight: 700;
+    width: 50%;
+    color: white;
+    font-size: 64px;
+    position: relative;
+    transition: all .5s ease;
+}
+.animate{
+    position: relative;
+    animation: textanim 1s ease forwards;
+    transition: all .5s ease;
+}
+@keyframes textanim{
+    0%{
+        bottom: 0;
+    }
+    100%{
+        bottom: 500px;
+        font-size: 16px;
+    }
+}
+.right-part{
+    padding: 25px 0;
+    backdrop-filter: blur(50px)brightness(70%);
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 50px;
+    flex-direction: column;
+}
+
+.right-part-info{
+    opacity: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 25px;
+    width: 80%;
+    h5{
+        font-size: 16px;
+    }
+}
+.show{
+    animation: show 1s ease forwards;
+    animation-delay: .5s;
+}
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

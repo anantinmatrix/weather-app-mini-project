@@ -1,0 +1,27 @@
+.weatherinfo{
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    width: 100%;
+    opacity: 0;
+}
+.temp{
+    font-size: 100px;
+}
+.cityname{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cityname  .city{
+    font-size: 45px;
+}
+.description{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    h5{
+        font-size: 40px;
+    }
+}
