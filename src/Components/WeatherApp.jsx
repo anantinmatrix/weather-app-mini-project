@@ -9,14 +9,14 @@ function WeatherApp() {
   let [onloadText, setonloadText] = useState("The Weather Hunt")
   let backgroungURL = [
     {
-      clearDay: "public/assets/clear_day.jpg",
-      rainyDay: "public/assets/rainy_day.jpg",
-      winterDay: "public/assets/winter_day.jpg",
+      clearDay: "/assets/clear_day.jpg",
+      rainyDay: "/assets/rainy_day.jpg",
+      winterDay: "/assets/winter_day.jpg",
     },
     {
-      clearNight: "public/assets/clear_night.jpg",
-      rainyNight: "public/assets/rainy_night.jpg",
-      winterNight: "public/assets/winter_night.jpg"
+      clearNight: "/assets/clear_night.jpg",
+      rainyNight: "/assets/rainy_night.jpg",
+      winterNight: "/assets/winter_night.jpg"
     }
   ]
   let choosebg = () => {
@@ -28,7 +28,7 @@ function WeatherApp() {
       return backgroungURL[0].clearDay;
     }
     else {
-      return "public/assets/default.jpg"
+      return "/assets/default.jpg"
     }
   }
   let choosedBg = choosebg()
