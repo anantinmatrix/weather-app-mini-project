@@ -7,8 +7,8 @@ import { useState } from 'react';
 export default function Search({ updateInfo }) {
     let [cityname, setcityname] = useState("Delhi");
     let input = document.querySelector("#search");
-    let URL = "https://api.openweathermap.org/data/2.5/weather?"
-    let APPKEY = "e96af6fa3bfdd7695196cb7deb0d5e88"
+    let URL = import.meta.env.VITE_API_URL;
+    let APPKEY = import.meta.env.VITE_WEATHER_API_KEY;
 
     async function handleWeatherData() {
         let fetching = await fetch(`${URL}q=${cityname}&appid=${APPKEY}&units=metric`)
